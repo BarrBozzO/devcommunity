@@ -1,0 +1,18 @@
+{
+  "name": "social-developers",
+  "version": "1.0.0",
+  "description": "social for devs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Constantine",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "gravatar": "^1.6.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.6"
+  }
+}
