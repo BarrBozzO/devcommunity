@@ -1,10 +1,12 @@
 {
   "development": {
     "MONGO_URI": "mongodb://localhost:27017/soc",
+    "secret": "justDance",
     "PORT": 3000
   },
   "test": {
     "MONGO_URI": "mongodb://localhost:27017/soc",
+    "secret": "justDance",
     "PORT": 3000
   }
 }
