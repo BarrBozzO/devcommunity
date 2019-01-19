@@ -14,10 +14,7 @@ const posts = require("./routes/api/posts");
 app = express();
 
 // Mongodb
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Mongo db connected"))
-  .catch(err => console.log(err));
+mongoose.connect(process.env.MONGO_URI).catch(err => console.log(err));
 
 // Parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,6 +29,17 @@ app.use("/api/users", users);
 app.use("/api/profile", profile);
 app.use("/api/posts", posts);
 
-app.listen(process.env.PORT, err => {
-  if (!err) console.log(`Listen on port ${process.env.PORT}`);
+app.on("dbConnected", function() {
+  app.listen(process.env.PORT, err => {
+    if (!err) {
+      console.log(`Listen on port ${process.env.PORT}`);
+      app.emit("appStarted");
+    }
+  });
 });
+
+mongoose.connection.once("open", function() {
+  app.emit("dbConnected");
+});
+
+module.exports = { app };

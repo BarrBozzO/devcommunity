@@ -4,6 +4,7 @@ const passport = require("passport");
 
 // Load Models
 const { User } = require("../../models/User");
+const { Profile } = require("../../models/Profile");
 const { Post } = require("../../models/Post");
 // Validation
 const validate = require("../../validation").posts;
@@ -157,7 +158,7 @@ router.post(
   "/comment/:id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validatePostInput(req.body);
+    const { errors, isValid } = validate.create(req.body);
 
     // Check Validation
     if (!isValid) {
