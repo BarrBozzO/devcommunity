@@ -10,54 +10,54 @@ const validateFunctions = {
     data.skills = !_.isEmpty(data.skills) ? data.skills : "";
 
     if (!validator.isLength(data.handle, { min: 2, max: 40 })) {
-      errors.handle = "Handle needs to between 2 and 4 characters";
+      errors.handle = "Указатель должен быть не менее 2 и не более 40 символов";
     }
 
     if (validator.isEmpty(data.handle)) {
-      errors.handle = "Profile handle is required";
+      errors.handle = "Указатель обязателеное поле";
     }
 
     if (validator.isEmpty(data.status)) {
-      errors.status = "Status field is required";
+      errors.status = "Статус обязателеное поле";
     }
 
     if (validator.isEmpty(data.skills)) {
-      errors.skills = "Skills field is required";
+      errors.skills = "Навыки обязательное поле";
     }
 
     if (!_.isEmpty(data.website)) {
       if (!validator.isURL(data.website)) {
-        errors.website = "Not a valid URL";
+        errors.website = "Некорректный URL";
       }
     }
 
     if (!_.isEmpty(data.youtube)) {
       if (!validator.isURL(data.youtube)) {
-        errors.youtube = "Not a valid URL";
+        errors.youtube = "Некорректный URL";
       }
     }
 
     if (!_.isEmpty(data.twitter)) {
       if (!validator.isURL(data.twitter)) {
-        errors.twitter = "Not a valid URL";
+        errors.twitter = "Некорректный URL";
       }
     }
 
     if (!_.isEmpty(data.facebook)) {
       if (!validator.isURL(data.facebook)) {
-        errors.facebook = "Not a valid URL";
+        errors.facebook = "Некорректный URL";
       }
     }
 
     if (!_.isEmpty(data.linkedin)) {
       if (!validator.isURL(data.linkedin)) {
-        errors.linkedin = "Not a valid URL";
+        errors.linkedin = "Некорректный URL";
       }
     }
 
     if (!_.isEmpty(data.instagram)) {
       if (!validator.isURL(data.instagram)) {
-        errors.instagram = "Not a valid URL";
+        errors.instagram = "Некорректный URL";
       }
     }
 
@@ -74,15 +74,15 @@ const validateFunctions = {
     data.from = !_.isEmpty(data.from) ? data.from : "";
 
     if (validator.isEmpty(data.title)) {
-      errors.title = "Job title field is required";
+      errors.title = "Должность обязательное поле";
     }
 
     if (validator.isEmpty(data.company)) {
-      errors.company = "Company field is required";
+      errors.company = "Компания обязательное поле";
     }
 
     if (validator.isEmpty(data.from)) {
-      errors.from = "From date field is required";
+      errors.from = "Дата начала обязательное поле";
     }
 
     return {
@@ -99,19 +99,19 @@ const validateFunctions = {
     data.from = !_.isEmpty(data.from) ? data.from : "";
 
     if (validator.isEmpty(data.school)) {
-      errors.school = "School field is required";
+      errors.school = "Учебное заведение обязательное поле";
     }
 
     if (validator.isEmpty(data.degree)) {
-      errors.degree = "Degree field is required";
+      errors.degree = "Степень обязательное поле";
     }
 
     if (validator.isEmpty(data.fieldofstudy)) {
-      errors.fieldofstudy = "Field of study field is required";
+      errors.fieldofstudy = "Область знания обязательное поле";
     }
 
     if (validator.isEmpty(data.from)) {
-      errors.from = "From date field is required";
+      errors.from = "Дата окончания обязательное поле";
     }
 
     return {
