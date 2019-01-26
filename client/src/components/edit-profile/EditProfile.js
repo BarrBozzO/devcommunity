@@ -212,12 +212,12 @@ class CreateProfile extends Component {
                   info="Give us an idea of where you are at your career"
                 />
                 <TextFieldGroup
-                  placeholder="Company"
+                  placeholder="Компания"
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
-                  info="Could be your own company or one you work for"
+                  info=""
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -225,24 +225,23 @@ class CreateProfile extends Component {
                   value={this.state.website}
                   onChange={this.onChange}
                   error={errors.website}
-                  info="Could be your own website or a company one"
+                  info="Ваш личный веб-сайт или вебсайт компании"
                 />
                 <TextFieldGroup
-                  placeholder="Location"
+                  placeholder="Местоположение"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
+                  info="Страна, Область, Город"
                 />
                 <TextFieldGroup
-                  placeholder="* Skills"
+                  placeholder="* Навыки"
                   name="skills"
                   value={this.state.skills}
                   onChange={this.onChange}
                   error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP)"
+                  info="Example - HTML,CSS,JavaScript,PHP"
                 />
                 <TextFieldGroup
                   placeholder="Github Username"
@@ -253,7 +252,7 @@ class CreateProfile extends Component {
                   info="If you want your latest repos and a Github link, include your username"
                 />
                 <TextAreaFieldGroup
-                  placeholder="Short Bio"
+                  placeholder="Коротко о себе"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
@@ -270,14 +269,14 @@ class CreateProfile extends Component {
                     }}
                     className="btn btn-light"
                   >
-                    Add Social Network Links
+                    Добавить социальные сети
                   </button>
-                  <span className="text-muted">Optional</span>
+                  <span className="text-muted">Необязательно</span>
                 </div>
                 {socialInputs}
                 <input
                   type="submit"
-                  value="submit"
+                  value="Обновить"
                   className="btn btn-info btn-block mt-4"
                 />
               </form>
