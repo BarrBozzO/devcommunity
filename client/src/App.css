@@ -4,7 +4,9 @@ img {
 
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat;
+  background: #eb3349;
+  background: -webkit-linear-gradient(to right, #f45c43, #eb3349);
+  background: linear-gradient(to right, #f45c43, #eb3349);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -17,7 +19,6 @@ img {
 }
 
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -36,4 +37,10 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+@media (max-width: 575.98px) {
+  #root h1 {
+    font-size: 2.5rem;
+  }
 }
